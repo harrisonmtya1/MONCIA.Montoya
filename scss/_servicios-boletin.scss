@@ -1,0 +1,74 @@
+/* SECCION DE SERVICIOS */
+
+.servicios {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section {
+    h2 {
+        background-image: $backgroudTitulo;
+        color: white;
+        padding: 15px 0 15px 0;
+        text-align: center;
+    }
+}
+
+.menuServicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: flex-start;
+}
+
+.itemServicio {
+    h3 {
+        padding: 0.5rem 0 0.5rem 1rem;
+        border: dotted;
+        border-color: yellow;
+        background: black;
+        color: white;
+    }
+    img {
+        width: 250px;
+        height: auto;
+    }
+}
+
+.servicioSeleccionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorServicio {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.tituloServicio {
+    padding: 0.5rem 0 0.5rem 1rem;
+    border: dotted;
+    border-color: yellow;
+    background: black;
+    color: white;
+}
+
+
+/* ESTILOS BOLETIN */
+
+.boletin {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    div {
+        width: 50%;
+        img {
+            width: 300px;
+        }
+    }
+}

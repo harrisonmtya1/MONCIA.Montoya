@@ -1,0 +1,43 @@
+/* ENCABEZADO */
+
+.subcontenedorHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 20vh;
+}
+
+.imgEncabezado {
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    animation-name: animacionLogo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.tituloEncabezado {
+    flex-grow: 3;
+}
+
+header {
+    div {
+        h1 {
+            background-image: $backgroudTitulo;
+            height: 100%;
+            width: 100%;
+            padding-top: 50px;
+        }
+    }
+}
+
+
+/* SLIDER */
+
+.slider {
+    width: 100%;
+    height: auto;
+    border-top: solid 3px red;
+}

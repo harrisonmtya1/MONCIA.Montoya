@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.footer--backgroundDegragadado {
+    background-image: linear-gradient(red, black);
+}
+
+.footer--paddingTopButton {
+    padding: 15px 0 15px 0;
+}

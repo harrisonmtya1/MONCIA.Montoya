@@ -1,0 +1,108 @@
+/* RESET CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/* TITULOS */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+/* MENU PRINCIPAL */
+
+ul {
+    list-style: none;
+    font-size: 0;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    display: inline-block;
+    background-color: black;
+    width: 20%;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+li ul {
+    position: absolute;
+    display: none;
+}
+
+ul ul li {
+    display: block;
+    width: 100%;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+li:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* ENCABEZADO */
+
+.subcontenedorHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 20vh;
+}
+
+.imgEncabezado {
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+}
+
+.tituloEncabezado {
+    flex-grow: 3;
+}
+
+header div h1 {
+    background-image: linear-gradient(red, black);
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+/* SECCION MANUALES */
+
+.botonManuales {
+    border: none;
+    width: 100%;
+    text-align: left;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2px;
+}

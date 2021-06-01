@@ -1,0 +1,10 @@
+//  TITULOS 
+h1,
+h2,
+h3,
+h4 {
+    font-family: $fuenteTitulo;
+    letter-spacing: $espacioLetraTitulo;
+    color: $colorLetraTitulo;
+    text-align: $alinecionTextoTitulo;
+}

@@ -1,0 +1,177 @@
+/* RESET CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/* TITULOS */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+/* MENU PRINCIPAL */
+
+ul {
+    list-style: none;
+    font-size: 0;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    display: inline-block;
+    background-color: black;
+    width: 20%;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+li ul {
+    position: absolute;
+    display: none;
+}
+
+ul ul li {
+    display: block;
+    width: 100%;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+li:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* ENCABEZADO */
+
+.header__marca {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 20vh;
+}
+
+.header__marca__img {
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+}
+
+.header__marca__titulo {
+    flex-grow: 3;
+}
+
+header div h1 {
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+/* FORMULARIO Y UBICACION */
+
+.contenedorPpal {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.contenedorPpal div {
+    width: 50%;
+}
+
+section h2 {
+    background-color: black;
+    color: white;
+    padding: 15px 0 15px 0;
+    text-align: center;
+    border-top: solid 3px red;
+}
+
+
+/* FORMULARIO */
+
+fieldset {
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+form * {
+    display: block;
+    margin-top: 5px;
+}
+
+textarea {
+    width: 100%;
+}
+
+.contenido__formulario__input--wh {
+    height: 3em;
+}
+
+.contenido__formulario__input--boder {
+    border-radius: 2em;
+    border: solid red 1px
+}
+
+.contenido__formulario__boton {
+    border: solid red 1px;
+    border-radius: 1em;
+    display: inline;
+    color: white;
+}
+
+.contenido__formulario__boton--bg {
+    background-color: rgb(48, 45, 45);
+}
+
+.contenido__formulario__boton--pm {
+    padding: 5px 10px 5px 10px;
+    margin: 3px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.footer--backgroundDegragadado {
+    background-image: linear-gradient(red, black);
+}
+
+.footer--paddingTopButton {
+    padding: 15px 0 15px 0;
+}
+
+.footer--marginTop20 {
+    margin-top: 20px;
+}

@@ -1,0 +1,48 @@
+.contenedorItems{
+    @if $widthbody==100%{
+        width: $widthbody - 20%;
+        margin: auto;
+    } 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    .contenedorItems__item{
+        border: 1px solid red;
+        border-bottom: 5px solid red ;
+        padding: 5px;
+        margin: 20px;
+       
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    h2{
+        color: black;
+        text-align: left;
+        letter-spacing: 0;
+    }
+    h3{
+        color:black;
+        text-align: left;
+        letter-spacing: 0;
+
+    }
+    input{
+        height: 2em;
+        width: 8em;
+
+    }
+    .contenedorItems__item__boton{
+        border-radius: 10px;
+        height: 2em;
+        width: 8em;
+        background-color:black;
+        color: red;
+        border: 1px solid red;
+        
+    }
+}
+
