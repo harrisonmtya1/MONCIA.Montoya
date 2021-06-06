@@ -1,5 +1,7 @@
 /* MENU PRINCIPAL */
 
+*{text-decoration: none;}
+
 ul {
     font-size: 0;
     padding: 0;
@@ -18,6 +20,7 @@ ul {
             position: absolute;
             display: none;
             li {
+                text-decoration: none;
                 display: block;
                 width: 100%;
             }
