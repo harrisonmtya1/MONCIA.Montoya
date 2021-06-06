@@ -119,6 +119,14 @@ h4 {
     color: red;
     border: 1px solid red; }
 
+@keyframes animacionLogo {
+  50% {
+    transform: rotateY(180deg); }
+  80% {
+    transform: rotateX(0deg); }
+  100% {
+    transform: rotateX(360deg); } }
+
 * {
   margin: 0;
   padding: 0;

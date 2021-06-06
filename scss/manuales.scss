@@ -1,0 +1,29 @@
+@import "_variables";
+@import "_encabezado";
+@import "_menu";
+@import "_footer";
+@import "_titulos";
+@import "_animaciones";
+
+// RESET
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* SECCION MANUALES */
+
+.botonManuales {
+    border: none;
+    width: 100%;
+    text-align: left;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2px;
+    }

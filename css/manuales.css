@@ -1,39 +1,43 @@
-/* RESET CSS */
+/* ENCABEZADO */
+.subcontenedorHeader {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 20vh; }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
+.imgEncabezado {
+  background-image: url(../images/logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-grow: 1;
+  animation-name: animacionLogo;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; }
 
+.tituloEncabezado {
+  flex-grow: 3; }
 
-/* TITULOS */
+header div h1 {
+  background-image: linear-gradient(red, black);
+  height: 100%;
+  width: 100%;
+  padding-top: 50px; }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Kanit', sans-serif;
-    letter-spacing: 0.5rem;
-}
-
-h1 {
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-
+/* SLIDER */
+.slider {
+  width: 100%;
+  height: auto;
+  border-top: solid 3px red; }
 
 /* MENU PRINCIPAL */
+* {
+  text-decoration: none; }
 
 ul {
-    list-style: none;
-    font-size: 0;
-    padding: 0;
-}
-
-li {
+  font-size: 0;
+  padding: 0; }
+  ul li {
     position: relative;
     display: inline-block;
     background-color: black;
@@ -42,67 +46,65 @@ li {
     text-align: center;
     color: white;
     font-size: 1rem;
-    font-family: 'Titillium Web', sans-serif;
-}
+    font-family: "Titillium Web", sans-serif;
+    transition: padding 0.5s; }
+    ul li ul {
+      position: absolute;
+      display: none; }
+      ul li ul li {
+        text-decoration: none;
+        display: block;
+        width: 100%; }
+    ul li:hover {
+      background-color: white;
+      color: black;
+      padding: 5px 0 5px 0; }
+    ul li:hover ul {
+      display: block; }
 
-li ul {
-    position: absolute;
-    display: none;
-}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto; }
 
-ul ul li {
-    display: block;
-    width: 100%;
-}
+.footer--backgroundDegragadado {
+  background-image: linear-gradient(red, black); }
 
-ul li:hover ul {
-    display: block;
-}
+.footer--paddingTopButton {
+  padding: 15px 0 15px 0; }
 
-li:hover {
-    background-color: white;
-    color: black;
-}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 0.5rem;
+  color: white;
+  text-align: center; }
 
+@keyframes animacionLogo {
+  50% {
+    transform: rotateY(180deg); }
+  80% {
+    transform: rotateX(0deg); }
+  100% {
+    transform: rotateX(360deg); } }
 
-/* ENCABEZADO */
-
-.subcontenedorHeader {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 20vh;
-}
-
-.imgEncabezado {
-    background-image: url(../images/logo.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    flex-grow: 1;
-}
-
-.tituloEncabezado {
-    flex-grow: 3;
-}
-
-header div h1 {
-    background-image: linear-gradient(red, black);
-    height: 100%;
-    width: 100%;
-    padding-top: 50px;
-}
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 /* SECCION MANUALES */
-
 .botonManuales {
-    border: none;
-    width: 100%;
-    text-align: left;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 2px;
-}
+  border: none;
+  width: 100%;
+  text-align: left;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 2px; }
