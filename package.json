@@ -1,0 +1,24 @@
+{
+  "name": "moncia.montoya",
+  "version": "1.0.0",
+  "description": "Trabajo final DWCoderHouse",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -w scss/ -o css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrisonmtya1/MONCIA.Montoya.git"
+  },
+  "author": "Harrison Montoya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harrisonmtya1/MONCIA.Montoya/issues"
+  },
+  "homepage": "https://github.com/harrisonmtya1/MONCIA.Montoya#readme"
+}
