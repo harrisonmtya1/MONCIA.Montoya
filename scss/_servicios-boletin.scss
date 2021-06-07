@@ -1,11 +1,11 @@
 /* SECCION DE SERVICIOS */
 
 .servicios {
-    width: 90vw;
+    height: 60vh;
     margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    div{width: 100%;}
 }
 
 section {
@@ -25,6 +25,7 @@ section {
 }
 
 .itemServicio {
+    
     h3 {
         padding: 0.5rem 0 0.5rem 1rem;
         border: dotted;
@@ -34,7 +35,7 @@ section {
     }
     img {
         width: 250px;
-        height: auto;
+        height: 121px;
     }
 }
 

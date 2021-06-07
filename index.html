@@ -83,22 +83,22 @@
         <div class="servicios">
 
             <div class="menuServicios">
-                <div class="itemServicio">
+                <div class="itemServicio" onclick="monstrarServicio('repuestos')">
                     <h3>Repuestos</h3>
                     <img src="images/repuestos.jpg" class="imgservicio"></div>
-                <div class="itemServicio">
+                <div class="itemServicio" onclick="monstrarServicio('accesorios')">
                     <h3>Accesorios</h3>
                     <img src="images/accesorios.jpg" class="imgservicio"> </div>
-                <div class="itemServicio">
+                <div class="itemServicio" onclick="monstrarServicio('lavado')">
                     <h3>Lavado</h3>
                     <img src="images/lavado_moto3.jpg" class="imgservicio"></div>
-                <div class="itemServicio">
+                <div class="itemServicio" onclick="monstrarServicio('llantas')">
                     <h3>Llantas</h3>
                     <img src="images/llantas.jpg" class="imgservicio"></div>
-                <div class="itemServicio">
+                <div class="itemServicio" onclick="monstrarServicio('reparacion')">
                     <h3>Raparacion</h3>
                     <img src="images/reparacion.jpg" class="imgservicio"></div>
-                <div class="itemServicio">
+                <div class="itemServicio" onclick="monstrarServicio('pintura')">
                     <h3>Pintura</h3>
                     <img src="images/pintura.jpg" class="imgservicio"></div>
 
@@ -106,42 +106,37 @@
 
 
             <div class="servicioSeleccionado">
-                <div class="contenedorServicio">
+                <div class="contenedorServicio" style="display:block" id="repuestos">
                     <h3 class="tituloServicio">Repuestos</h3>
                     <img src="images/repuestos.jpg" height="100px" style="float: left; ">
-                    <p>Ofrecemos todos los repuestos necesarios para tu moto, adicional ofrecemos la instalacion de estos de forma gratuita
-                    </p>
+                    <p>Ofrecemos todos los respuestos necesarios para tu moto, adicional te haremos la instalacion de los mismos completamente gratis</p>
+                        <p><b>Visita Nuestra<a href="tiendavirtual.html">Tienda Virtual</a> </b></p>
                 </div>
-                <!--<div class="contenedorServicio">
+                <div class="contenedorServicio" style="display:none" id="accesorios">
                 <h3 class="tituloServicio">Accesorios</h3>
                 <img src="images/accesorios.jpg" height="100px" style="float: left; ">
-                <p>Ofrecemos todos los accesorios necesarios para tu moto, adicional ofrecemos la instalacion de estos de forma gratuita
-                </p>
+                <p>Contamos con todos los accesorios necesarios para tu moto,todas las marcas y todos los estilos. Instalacion completamente gratis</p>
             </div>
-            <div class="contenedorServicio">
+            <div class="contenedorServicio" style="display:none" id="lavado">
                 <h3 class="tituloServicio">Lavado</h3>
                 <img src="images/lavado_moto3.jpg" height="100px" style="float: left; ">
-                <p>Ofrecemos servicio de lavado para tu moto, excelente servicio y calidad
-                </p>
+                <p>Ofrecemos servicio de lavado para tu moto, excelente servicio y calidad; tambien contamos con servicio a domicilio sin ningun costo adicional</p>
             </div>
-            <div class="contenedorServicio">
+            <div class="contenedorServicio" style="display:none" id="llantas">
                 <h3 class="tituloServicio">Llantas</h3>
                 <img src="images/llantas.jpg" height="100px" style="float: left; ">
-                <p>Tenemos todas llantas de acurdo con tu necesidad o gustos, adicional ofrecemos la instalacion de estos de forma gratuita
-                </p>
+                <p>Tenemos todo tipo de llantas de acuerdo a tu necesidad y gusto, la instalacion es completamente gratis</p>
             </div>
-            <div class="contenedorServicio">
+            <div class="contenedorServicio" style="display:none" id="reparacion">
                 <h3 class="tituloServicio">Reparacion</h3>
                 <img src="images/reparacion.jpg" height="100px" style="float: left; ">
-                <p>Contamos con personal calificado para la reparacion de tu moto, cualquier marca y cualquier gama, llena nuestro formularios en la seccion --&gt;: <a href="contactenos.html"><b>CONTACTANOS</b></a>
-                </p>
+                <p>Contamos con personal altamente calificado para la reparacion de tu moto, cualquier marca y gama; llena nuestro formulario en la seccion <b><a href="contactenos.html">Contatectenos</a></b></p>
             </div>
-            <div class="contenedorServicio">
+            <div class="contenedorServicio" style="display:none" id="pintura">
                 <h3 class="tituloServicio">Pintura</h3>
                 <img src="images/pintura.jpg" height="100px" style="float: left; ">
-                <p>Ofrecemos todos los repuestos necesarios para tu moto, adicional ofrecemos la instalacion de estos de forma gratuita
-                </p>
-            </div>-->
+                <p>Contamos con servicio de pintura en cabina, trae tu moto y te cotizaremos al mejor precio.</p>
+            </div>
             </div>
         </div>
     </section>
@@ -188,6 +183,23 @@
 
 
     </footer>
+
+    <script>
+        function monstrarServicio(id)  {
+            var  servicios=document.getElementsByClassName("contenedorServicio") ;
+            var  i  =  0 ;
+            while(i<servicios.length)  {
+                servicios[i].style.display="none";
+                i+= 1 ;
+            }
+
+            var  servicio= document.getElementById (id) ;
+            if  ( servicio.style.display  ===  "none" )  {
+                servicio.style.display  =  "block" ;
+
+            }
+        }
+    </script>
 </body>
 
 </html>

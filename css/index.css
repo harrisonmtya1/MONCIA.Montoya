@@ -72,11 +72,12 @@ ul {
 
 /* SECCION DE SERVICIOS */
 .servicios {
-  width: 90vw;
+  height: 60vh;
   margin: auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+  flex-direction: row; }
+  .servicios div {
+    width: 100%; }
 
 section h2 {
   background-image: linear-gradient(red, black);
@@ -99,7 +100,7 @@ section h2 {
 
 .itemServicio img {
   width: 250px;
-  height: auto; }
+  height: 121px; }
 
 .servicioSeleccionado {
   display: flex;
