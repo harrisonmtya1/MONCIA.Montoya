@@ -25,17 +25,15 @@ section {
 }
 
 .itemServicio {
-    
+    &:hover{cursor: pointer;}
     h3 {
-        padding: 0.5rem 0 0.5rem 1rem;
-        border: dotted;
-        border-color: yellow;
-        background: black;
-        color: white;
+       @extend .tituloServicio
+               
     }
     img {
-        width: 250px;
+        width: 210px;
         height: 121px;
+        
     }
 }
 
@@ -44,12 +42,10 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
-.contenedorServicio {
-    width: 100%;
-    margin-top: 5px;
-}
+
 
 .tituloServicio {
     padding: 0.5rem 0 0.5rem 1rem;
