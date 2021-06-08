@@ -102,7 +102,11 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background-image: url(../images/logoFondo.png); }
+  .servicioSeleccionado p {
+    font-size: larger;
+    font-weight: bold; }
 
 .tituloServicio, .itemServicio h3 {
   padding: 0.5rem 0 0.5rem 1rem;

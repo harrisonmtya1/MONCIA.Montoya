@@ -99,6 +99,18 @@ h4 {
   box-sizing: border-box; }
 
 /* SECCION MANUALES */
+.subEncabezado {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  align-items: center; }
+
+.subEncabezado__img img {
+  width: 100%; }
+
+.subEncabezado__titulo h2 {
+  color: black; }
+
 .botonManuales {
   border: none;
   width: 100%;
