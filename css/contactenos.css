@@ -100,19 +100,31 @@ h4 {
 
 /* FORMULARIO Y UBICACION */
 .contenedorPpal {
-  display: flex;
-  flex-direction: row;
-  width: 100vw; }
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 80%;
+  margin: auto;
+  grid-template-areas: "imagen imagen texto texto texto" "formulario formulario mapa mapa mapa" "formulario formulario mapa mapa mapa" "formulario formulario mapa mapa mapa";
+  border-top: solid red 2px;
+  align-items: center; }
 
-.contenedorPpal div {
-  width: 50%; }
+.contenedorPpal_imagen {
+  grid-area: imagen;
+  width: 100%; }
 
-section h2 {
-  background-color: black;
-  color: white;
-  padding: 15px 0 15px 0;
-  text-align: center;
-  border-top: solid 3px red; }
+.contenedorPpal_texto {
+  grid-area: texto; }
+  .contenedorPpal_texto h2 {
+    color: black;
+    letter-spacing: normal;
+    text-align: start; }
+
+.contenido_formulario {
+  grid-area: formulario; }
+
+.contenido_mapa {
+  grid-area: mapa; }
 
 /* FORMULARIO */
 fieldset {

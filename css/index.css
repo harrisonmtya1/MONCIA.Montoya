@@ -92,7 +92,8 @@ section h2 {
   align-items: flex-start; }
 
 .itemServicio:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  border: dotted red; }
 
 .itemServicio img {
   width: 210px;

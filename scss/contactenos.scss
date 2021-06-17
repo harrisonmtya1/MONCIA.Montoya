@@ -6,69 +6,87 @@
 @import "_footer";
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* FORMULARIO Y UBICACION */
 
 .contenedorPpal {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 80%;
+  margin: auto;
+  grid-template-areas:
+    "imagen imagen texto texto texto" "formulario formulario mapa mapa mapa"
+    "formulario formulario mapa mapa mapa"
+    "formulario formulario mapa mapa mapa";
+    border-top: solid red 2px;
+    align-items: center;
 }
 
-.contenedorPpal div {
-    width: 50%;
+.contenedorPpal_imagen {
+  grid-area: imagen;
+  width: 100%;
 }
 
-section h2 {
-    background-color: black;
-    color: white;
-    padding: 15px 0 15px 0;
-    text-align: center;
-    border-top: solid 3px red;
+.contenedorPpal_texto {
+  grid-area: texto;
+  h2{
+     color: black; 
+     letter-spacing: normal;
+     text-align: start;
+     
+}
 }
 
+.contenido_formulario {
+  grid-area: formulario;
+}
+
+.contenido_mapa {
+  grid-area: mapa;
+}
 
 /* FORMULARIO */
 
 fieldset {
-    padding: 1rem;
-    margin-left: 1rem;
+  padding: 1rem;
+  margin-left: 1rem;
 }
 
 form * {
-    display: block;
-    margin-top: 5px;
+  display: block;
+  margin-top: 5px;
 }
 
 textarea {
-    width: 100%;
+  width: 100%;
 }
 
 .contenido__formulario__input--wh {
-    height: 3em;
+  height: 3em;
 }
 
 .contenido__formulario__input--boder {
-    border-radius: 2em;
-    border: solid red 1px
+  border-radius: 2em;
+  border: solid red 1px;
 }
 
 .contenido__formulario__boton {
-    border: solid red 1px;
-    border-radius: 1em;
-    display: inline;
-    color: white;
+  border: solid red 1px;
+  border-radius: 1em;
+  display: inline;
+  color: white;
 }
 
 .contenido__formulario__boton--bg {
-    background-color: rgb(48, 45, 45);
+  background-color: rgb(48, 45, 45);
 }
 
 .contenido__formulario__boton--pm {
-    padding: 5px 10px 5px 10px;
-    margin: 3px;
+  padding: 5px 10px 5px 10px;
+  margin: 3px;
 }

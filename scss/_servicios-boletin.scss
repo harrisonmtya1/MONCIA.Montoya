@@ -25,7 +25,10 @@ section {
 }
 
 .itemServicio {
-    &:hover{cursor: pointer;}
+    &:hover{
+        cursor: pointer;
+        border: dotted red;
+    }
     h3 {
        @extend .tituloServicio
                
