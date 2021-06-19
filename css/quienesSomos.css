@@ -24,7 +24,31 @@ header div h1 {
   height: auto;
   border-top: solid 3px red; }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .subcontenedorHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 20vh; }
+    .subcontenedorHeader .imgEncabezado {
+      height: 100%;
+      background-image: url(../images/logo.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      flex-grow: 2;
+      animation-name: animacionLogo;
+      animation-duration: 5s;
+      animation-iteration-count: infinite; }
+  .tituloEncabezado {
+    flex-grow: 2; }
+  header div h1 {
+    background-image: linear-gradient(red, black);
+    height: 100%;
+    width: 100%;
+    padding-top: 50px; } }
+
+@media (min-width: 1025px) {
   .subcontenedorHeader {
     display: flex;
     flex-direction: row;
@@ -162,17 +186,19 @@ h4 {
 /* GRID SECCION PRINCIPAL */
 .contenido__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: 1fr 1fr 5fr;
-  grid-template-areas: "titulo img1" "parrafo img1" "img2 img2";
+  grid-template-areas: "titulo" "parrafo" "img2";
   width: 80vw;
-  height: 80vh;
+  height: 100vh;
   margin: auto;
   border-top: solid red 3px; }
 
 .contenido__grid__titulo {
   grid-area: titulo;
-  padding-top: 2rem; }
+  padding-top: 1rem;
+  color: black;
+  text-align: start; }
 
 .contenido__grid__parrafo {
   grid-area: parrafo; }
@@ -187,3 +213,14 @@ h4 {
   grid-area: img2;
   background-image: url(../images/quienessomosbanner.jpg);
   background-size: cover; }
+
+@media (min-width: 720px) {
+  .contenido__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr;
+    grid-template-areas: "titulo img1" "parrafo img1" "img2 img2";
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    border-top: solid red 3px; } }

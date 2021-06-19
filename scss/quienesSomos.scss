@@ -5,17 +5,52 @@
 @import "_titulos";
 @import "_animaciones";
 
-
 // RESET
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* GRID SECCION PRINCIPAL */
 
 .contenido__grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 5fr;
+    grid-template-areas: "titulo" "parrafo" "img2";
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+    border-top: solid red 3px;
+}
+
+.contenido__grid__titulo {
+  grid-area: titulo;
+  padding-top: 1rem;
+  color: black;
+  text-align: start;
+}
+
+.contenido__grid__parrafo {
+  grid-area: parrafo;
+}
+
+.contenido__grid__img1 {
+  grid-area: img1;
+  background-image: url(../images/quienessomos.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contenido__grid__img2 {
+  grid-area: img2;
+  background-image: url(../images/quienessomosbanner.jpg);
+  background-size: cover;
+}
+
+@media (min-width: 720px) {
+  .contenido__grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr 5fr;
@@ -24,26 +59,5 @@
     height: 80vh;
     margin: auto;
     border-top: solid red 3px;
-}
-
-.contenido__grid__titulo {
-    grid-area: titulo;
-    padding-top: 2rem;
-}
-
-.contenido__grid__parrafo {
-    grid-area: parrafo;
-}
-
-.contenido__grid__img1 {
-    grid-area: img1;
-    background-image: url(../images/quienessomos.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.contenido__grid__img2 {
-    grid-area: img2;
-    background-image: url(../images/quienessomosbanner.jpg);
-    background-size: cover;
+  }
 }

@@ -24,7 +24,31 @@ header div h1 {
   height: auto;
   border-top: solid 3px red; }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .subcontenedorHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 20vh; }
+    .subcontenedorHeader .imgEncabezado {
+      height: 100%;
+      background-image: url(../images/logo.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      flex-grow: 2;
+      animation-name: animacionLogo;
+      animation-duration: 5s;
+      animation-iteration-count: infinite; }
+  .tituloEncabezado {
+    flex-grow: 2; }
+  header div h1 {
+    background-image: linear-gradient(red, black);
+    height: 100%;
+    width: 100%;
+    padding-top: 50px; } }
+
+@media (min-width: 1025px) {
   .subcontenedorHeader {
     display: flex;
     flex-direction: row;
@@ -145,8 +169,10 @@ section h2 {
   display: flex;
   flex-direction: column;
   width: 100vw; }
+  .boletin div img {
+    width: 100%; }
 
-@media (min-width: 720px) {
+@media (min-width: 1025px) {
   .servicios {
     height: 60vh;
     display: flex;
@@ -160,6 +186,60 @@ section h2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    align-items: flex-start; }
+  .itemServicio:hover {
+    cursor: pointer;
+    border: dotted red; }
+  .itemServicio h3 {
+    padding: 0.5rem 0 0.5rem 1rem;
+    border: dotted;
+    border-color: yellow;
+    background: black;
+    color: white; }
+  .itemServicio img {
+    display: inline-block;
+    width: 210px;
+    height: 121px; }
+  .servicioSeleccionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/logoFondo.png); }
+    .servicioSeleccionado p {
+      font-size: larger;
+      font-weight: bold; }
+    .servicioSeleccionado img {
+      display: block; }
+  .tituloServicio, .itemServicio h3 {
+    padding: 0.5rem 0 0.5rem 1rem;
+    border: dotted;
+    border-color: yellow;
+    background: black;
+    color: white; }
+  /* ESTILOS BOLETIN */
+  .boletin {
+    display: flex;
+    flex-direction: row;
+    width: 100vw; }
+    .boletin div {
+      width: 50%; }
+      .boletin div img {
+        width: 300px; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .servicios {
+    display: flex;
+    flex-direction: row; }
+    .servicios div {
+      width: 100%; }
+  section h2 {
+    background-image: linear-gradient(red, black);
+    padding: 15px 0 15px 0; }
+  .menuServicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     align-items: flex-start; }
   .itemServicio:hover {
     cursor: pointer;

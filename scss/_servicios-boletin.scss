@@ -52,9 +52,14 @@ section {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  div{
+    img{
+      width: 100%;
+    }
+  }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 1025px) {
   .servicios {
     height: 60vh;
     display: flex;
@@ -75,6 +80,85 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    align-items: flex-start;
+  }
+
+  .itemServicio {
+    &:hover {
+      cursor: pointer;
+      border: dotted red;
+    }
+    h3 {
+      padding: 0.5rem 0 0.5rem 1rem;
+      border: dotted;
+      border-color: yellow;
+      background: black;
+      color: white;
+    }
+    img {
+      display: inline-block;
+      width: 210px;
+      height: 121px;
+    }
+  }
+
+  .servicioSeleccionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/logoFondo.png);
+    p {
+      font-size: larger;
+      font-weight: bold;
+    }
+    img{display: block;}
+  }
+
+  .tituloServicio {
+    padding: 0.5rem 0 0.5rem 1rem;
+    border: dotted;
+    border-color: yellow;
+    background: black;
+    color: white;
+  }
+
+  /* ESTILOS BOLETIN */
+
+  .boletin {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    div {
+      width: 50%;
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) and (max-width:1024px) {
+  .servicios {
+    display: flex;
+    flex-direction: row;
+    div {
+      width: 100%;
+    }
+  }
+
+  section {
+    h2 {
+      background-image: $backgroudTitulo;
+      padding: 15px 0 15px 0;
+    }
+  }
+
+  .menuServicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     align-items: flex-start;
   }
 
