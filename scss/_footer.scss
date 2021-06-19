@@ -1,3 +1,4 @@
+
 .footer {
     display: flex;
     flex-direction: row;
@@ -5,6 +6,8 @@
     align-items: center;
     width: 80%;
     margin: auto;
+    div{h3{display: none;}}
+    
 }
 
 .footer--backgroundDegragadado {
@@ -13,4 +16,24 @@
 
 .footer--paddingTopButton {
     padding: 15px 0 15px 0;
+}
+
+@media (min-width:720px){
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    div{h3{display: inline;}}
+}
+
+.footer--backgroundDegragadado {
+    background-image: linear-gradient(red, black);
+}
+
+.footer--paddingTopButton {
+    padding: 15px 0 15px 0;
+}
 }

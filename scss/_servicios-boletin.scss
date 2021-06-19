@@ -1,77 +1,134 @@
 /* SECCION DE SERVICIOS */
 
 .servicios {
-    height: 60vh;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    div{width: 100%;}
+  display: flex;
+  flex-direction: column;
 }
 
 section {
-    h2 {
-        background-image: $backgroudTitulo;
-        color: white;
-        padding: 15px 0 15px 0;
-        text-align: center;
-    }
+  h2 {
+    background-image: $backgroudTitulo;
+    padding: 15px 0 15px 0;
+  }
 }
 
 .menuServicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.itemServicio {
+  &:hover {
+    cursor: pointer;
+    border: dotted red;
+  }
+  h3 {
+    @extend .tituloServicio;
+  }
+  img {
+    display: none;
+  }
+}
+
+.servicioSeleccionado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/logoFondo.png);
+  img{display: none;}
+}
+
+.tituloServicio {
+  padding: 0.5rem 0 0.5rem 1rem;
+  border: dotted;
+  border-color: yellow;
+  background: black;
+  color: white;
+}
+
+.boletin {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+@media (min-width: 720px) {
+  .servicios {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    div {
+      width: 100%;
+    }
+  }
+
+  section {
+    h2 {
+      background-image: $backgroudTitulo;
+      padding: 15px 0 15px 0;
+    }
+  }
+
+  .menuServicios {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: flex-start;
-}
+  }
 
-.itemServicio {
-    &:hover{
-        cursor: pointer;
-        border: dotted red;
+  .itemServicio {
+    &:hover {
+      cursor: pointer;
+      border: dotted red;
     }
     h3 {
-       @extend .tituloServicio
-               
+      padding: 0.5rem 0 0.5rem 1rem;
+      border: dotted;
+      border-color: yellow;
+      background: black;
+      color: white;
     }
     img {
-        width: 210px;
-        height: 121px;
-        
+      display: inline-block;
+      width: 210px;
+      height: 121px;
     }
-}
+  }
 
-.servicioSeleccionado {
+  .servicioSeleccionado {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-image: url(../images/logoFondo.png);
-    p{font-size: larger;
-    font-weight: bold;}
-    
-}
+    p {
+      font-size: larger;
+      font-weight: bold;
+    }
+    img{display: block;}
+  }
 
-
-
-.tituloServicio {
+  .tituloServicio {
     padding: 0.5rem 0 0.5rem 1rem;
     border: dotted;
     border-color: yellow;
     background: black;
     color: white;
-}
+  }
 
+  /* ESTILOS BOLETIN */
 
-/* ESTILOS BOLETIN */
-
-.boletin {
+  .boletin {
     display: flex;
     flex-direction: row;
     width: 100vw;
     div {
-        width: 50%;
-        img {
-            width: 300px;
-        }
+      width: 50%;
+      img {
+        width: 300px;
+      }
     }
+  }
 }

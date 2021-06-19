@@ -1,28 +1,22 @@
 /* ENCABEZADO */
 .subcontenedorHeader {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100vw;
-  height: 20vh; }
-
-.imgEncabezado {
-  background-image: url(../images/logo.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  flex-grow: 1;
-  animation-name: animacionLogo;
-  animation-duration: 5s;
-  animation-iteration-count: infinite; }
-
-.tituloEncabezado {
-  flex-grow: 3; }
+  height: 30vh; }
+  .subcontenedorHeader .imgEncabezado {
+    height: 50%;
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: animacionLogo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; }
 
 header div h1 {
   background-image: linear-gradient(red, black);
-  height: 100%;
-  width: 100%;
-  padding-top: 50px; }
+  padding: 25px 0 25px 0; }
 
 /* SLIDER */
 .slider {
@@ -30,37 +24,77 @@ header div h1 {
   height: auto;
   border-top: solid 3px red; }
 
+@media (min-width: 720px) {
+  .subcontenedorHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 20vh; }
+    .subcontenedorHeader .imgEncabezado {
+      height: 100%;
+      background-image: url(../images/logo.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      flex-grow: 1;
+      animation-name: animacionLogo;
+      animation-duration: 5s;
+      animation-iteration-count: infinite; }
+  .tituloEncabezado {
+    flex-grow: 3; }
+  header div h1 {
+    background-image: linear-gradient(red, black);
+    height: 100%;
+    width: 100%;
+    padding-top: 50px; } }
+
 /* MENU PRINCIPAL */
 * {
   text-decoration: none; }
 
-ul {
-  font-size: 0;
-  padding: 0; }
-  ul li {
-    position: relative;
-    display: inline-block;
-    background-color: black;
-    width: 20%;
-    padding: 10px 0 10px 0;
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    font-family: "Titillium Web", sans-serif;
-    transition: padding 0.5s; }
-    ul li ul {
-      position: absolute;
-      display: none; }
-      ul li ul li {
-        text-decoration: none;
-        display: block;
-        width: 100%; }
-    ul li:hover {
-      background-color: white;
-      color: black;
-      padding: 5px 0 5px 0; }
-    ul li:hover ul {
-      display: block; }
+li {
+  font-family: "Titillium Web", sans-serif;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  transition: padding 0.5s;
+  padding: 10px 0 10px 0;
+  text-align: center; }
+  li:hover {
+    background-color: white;
+    color: black;
+    padding: 5px 0 5px 0; }
+  li ul {
+    display: none; }
+
+@media (min-width: 720px) {
+  ul {
+    font-size: 0;
+    padding: 0; }
+    ul li {
+      position: relative;
+      display: inline-block;
+      background-color: black;
+      width: 20%;
+      padding: 10px 0 10px 0;
+      text-align: center;
+      color: white;
+      font-size: 1rem;
+      font-family: "Titillium Web", sans-serif;
+      transition: padding 0.5s; }
+      ul li ul {
+        position: absolute;
+        display: none; }
+        ul li ul li {
+          text-decoration: none;
+          display: block;
+          width: 100%; }
+      ul li:hover {
+        background-color: white;
+        color: black;
+        padding: 5px 0 5px 0; }
+      ul li:hover ul {
+        display: block; } }
 
 .footer {
   display: flex;
@@ -69,6 +103,8 @@ ul {
   align-items: center;
   width: 80%;
   margin: auto; }
+  .footer div h3 {
+    display: none; }
 
 .footer--backgroundDegragadado {
   background-image: linear-gradient(red, black); }
@@ -76,14 +112,39 @@ ul {
 .footer--paddingTopButton {
   padding: 15px 0 15px 0; }
 
+@media (min-width: 720px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto; }
+    .footer div h3 {
+      display: inline; }
+  .footer--backgroundDegragadado {
+    background-image: linear-gradient(red, black); }
+  .footer--paddingTopButton {
+    padding: 15px 0 15px 0; } }
+
 h1,
 h2,
 h3,
 h4 {
   font-family: "Kanit", sans-serif;
-  letter-spacing: 0.5rem;
+  letter-spacing: normal;
   color: white;
   text-align: center; }
+
+@media (min-width: 720px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Kanit", sans-serif;
+    letter-spacing: 0.5rem;
+    color: white;
+    text-align: center; } }
 
 .contenedorItems {
   width: 80%;
