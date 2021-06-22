@@ -2,6 +2,10 @@
 
 *{text-decoration: none;}
 
+ul{
+    margin-bottom: 0;
+    padding-left: 0;
+    a{text-decoration: none;}
 li{
     font-family: $fuenteMenu;
     background-color: black;
@@ -15,10 +19,8 @@ li{
         color: black;
         padding: 5px 0 5px 0;
     }
-    ul{
-        display: none;
-    }
-}
+    
+}}
 
 @media (min-width:720px){
     ul {
@@ -35,15 +37,7 @@ li{
             font-size: 1rem;
             font-family: $fuenteMenu;
             transition: padding 0.5s;
-            ul {
-                position: absolute;
-                display: none;
-                li {
-                    text-decoration: none;
-                    display: block;
-                    width: 100%;
-                }
-            }
+            
             &:hover {
                 background-color: white;
                 color: black;

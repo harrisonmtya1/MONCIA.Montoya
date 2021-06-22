@@ -43,6 +43,15 @@
 
 .contenido_formulario {
   grid-area: formulario;
+  padding: 10px;
+  h3{
+    background-image: $backgroudTitulo;
+    font-size: small;
+    letter-spacing: normal;
+  }
+  label{
+    font-family: $fuenteMenu;
+  }
 }
 
 .contenido_mapa {
@@ -70,8 +79,9 @@ textarea {
 }
 
 .contenido__formulario__input--boder {
-  border-radius: 2em;
+  border-radius: 2px;
   border: solid red 1px;
+  padding: 1px 2px 1px 5px;
 }
 
 .contenido__formulario__boton {
@@ -88,6 +98,10 @@ textarea {
 .contenido__formulario__boton--pm {
   padding: 5px 10px 5px 10px;
   margin: 3px;
+}
+
+.form-focus:focus{
+  
 }
 
 @media (min-width:720px){

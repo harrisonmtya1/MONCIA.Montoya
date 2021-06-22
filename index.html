@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -44,19 +46,56 @@
                 </a>
                 <a href="manuales.html">
                     <li>Manuales</li>
-                <a href="tiendaVirtual.html">
-                     <li> Tienda Virtual</li>
-                </a>
+                    <a href="tiendaVirtual.html">
+                        <li> Tienda Virtual</li>
+                    </a>
             </ul>
         </nav>
     </header>
 
     <section>
         <!--Slider de imagenes-->
-        <img class="slider" src="images/galeria/galeriaslider.jpg">
-        <img src="">
-        <img src="">
-        <img src="">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/galeria/galeriaslider.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/galeria/galeriaslider2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/galeria/galeriaslider3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/galeria/galeriaslider4.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/galeria/galeriaslider5.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
     </section>
 
@@ -139,23 +178,26 @@
     <section>
         <h2>Inscribete a nuestro boletin de Noticias</h2>
         <div class="boletin">
-            <div>
-                <form>
-                    <fieldset style="height: 200px;">
-                        <legend style="font-size: 20px; font-weight: bold;">Boletin</legend>
-                        <label class="label" for="nombre">Nombre</label><br>
-                        <input class="input" type="text" name="nombre" id="nombre">
-                        <br><br>
-                        <label class="label" for="email">Correo Electronico</label><br>
-                        <input class="input" type="email" id="email" name="email">
-                        <br><br>
-                        <button class="button" type="submit" onclick="alert('Suscripcion Exitosa')">Suscribirse</button>
-                    </fieldset>
+            <div class="boletin__formulario">
+                <form class="">
+
+                    
+                    <div class="mb-3">
+                        <label class="form-label" for="nombre">Nombre</label>
+                        <input class="form-control" type="text" name="nombre" id="nombre">
+                    </div>
+                    <div class="mb-3"><label class="form-label" for="email">Correo Electronico</label>
+                        <input class="form-control" type="email" id="email" name="email">
+                    </div>
+                    <div>
+                        <button class="btn btn-dark border border-3 border-danger" type="submit"
+                            onclick="alert('Suscripcion Exitosa')">Suscribirse</button>
+                    </div>
                 </form>
             </div>
-            <div>
-                <img src="images/boletin1.jpg"  style="margin: 5px;">
-                <img src="images/boletin2.jpg"  style="margin: 5px;">
+            <div class="boletin__imagenes">
+                <img src="images/boletin1.jpg" style="margin: 5px;">
+                <img src="images/boletin2.jpg" style="margin: 5px;">
             </div>
         </div>
     </section>
@@ -165,7 +207,7 @@
             <h2>MonCia</h2>
         </div>
         <div class="footer__redesSociales">
-            <h3 >Visitanos en Redesociales</h3>
+            <h3>Visitanos en Redesociales</h3>
             <a target="_blank" href="https://www.facebook.com/">
                 <i class="fab fa-facebook fa-2x" style="color:rgb(163, 160, 160);"></i>
             </a>
@@ -177,6 +219,9 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
     <script>
         function monstrarServicio(id) {
             var servicios = document.getElementsByClassName("contenedorServicio");
